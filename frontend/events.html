@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Events</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+<div>
+<button onclick="location.href='events.html'">🏠 Home</button>
+<button onclick="history.back()">⬅ Back</button>
+</div>
+<div>
+<button onclick="location.href='mytickets.html'">🎟 My Tickets</button>
+<button onclick="logout()">Logout</button>
+</div>
+</div>
+
+<div id="events"></div>
+
+<script src="events.js"></script>
+<script>
+function logout(){
+localStorage.clear();
+location.href="login.html";
+}
+</script>
+</body>
+</html>
