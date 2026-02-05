@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body style="text-align:center;">
+<h2>E-Ticket</h2>
+<p id="t"></p>
+<button onclick="window.print()">Download</button>
+<script>
+const id=new URLSearchParams(location.search).get("id");
+t.innerText="Ticket ID: "+id;
+</script>
+</body>
+</html>
