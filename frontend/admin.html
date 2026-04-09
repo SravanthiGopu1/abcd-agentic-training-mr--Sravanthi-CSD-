@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="card">
+  <h2>Add Event</h2>
+  <input id="n" placeholder="Event Name">
+  <input id="d" placeholder="Date">
+  <input id="l" placeholder="Location">
+  <input id="i" placeholder="Image URL">
+  <button onclick="add()">Add Event</button>
+</div>
+
+<script>
+function add(){
+  fetch("http://localhost:3000/addevent",{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({
+      name:n.value,date:d.value,location:l.value,image:i.value
+    })
+  }).then(()=>alert("Event added"));
+}
+</script>
+</body>
+</html>
